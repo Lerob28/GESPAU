@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>GESPAU Chauffeurs</title>
+
+    <link rel="shortcut icon" href="../assets/img/favicon.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../assets/plugins/feather/feather.css">
+
+    <link rel="stylesheet" href="../assets/plugins/icons/flags/flags.css">
+
+    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/plugins/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../assets/plugins/datatables/datatables.min.css">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+
+        <div class="header">
+
+            <div class="header-left">
+                <a href="index.html" class="logo">
+                    <img src="../assets/img/logo.png" alt="Logo">
+                </a>
+                <a href="index.html" class="logo logo-small">
+                    <img src="../assets/img/logo-small.png" alt="Logo" width="30" height="30">
+                </a>
+            </div>
+            <div class="menu-toggle">
+                <a href="javascript:void(0);" id="toggle_btn">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+
+            <div class="top-nav-search">
+                <form>
+                    <input type="text" class="form-control" placeholder="Recherche...">
+                    <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <a class="mobile_btn" id="mobile_btn">
+                <i class="fas fa-bars"></i>
+            </a>
+
+            <ul class="nav user-menu">
+                <li class="nav-item dropdown noti-dropdown language-drop me-2">
+                    <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
+                        <!-- <img src="../assets/img/icons/header-icon-01.svg" alt=""> -->
+                        <div class="dropdown-toggle nav-link header-nav-list"> <i class="flag flag-bl"></i></div>
+                    </a>
+                    <div class="dropdown-menu ">
+                        <div class="noti-content">
+                            <div>
+                                <a class="dropdown-item" href="javascript:;"><i
+                                        class="flag flag-lr me-2"></i>English</a>
+                                <a class="dropdown-item" href="javascript:;"><i
+                                        class="flag flag-bl me-2"></i>Francais</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown noti-dropdown me-2">
+                    <a href="#" class="dropdown-toggle nav-link header-nav-list" data-bs-toggle="dropdown">
+                        <img src="../assets/img/icons/header-icon-05.svg" alt="">
+                    </a>
+                    <div class="dropdown-menu notifications">
+                        <div class="topnav-dropdown-header">
+                            <span class="notification-title">Notifications</span>
+                            <a href="javascript:void(0)" class="clear-noti"> Clear All </a>
+                        </div>
+                        <div class="noti-content">
+                            <ul class="notification-list">
+                                <li class="notification-message">
+                                    <a href="#">
+                                        <div class="media d-flex">
+                                            <span class="avatar avatar-sm flex-shrink-0">
+                                                <img class="avatar-img rounded-circle" alt="User Image"
+                                                    src="../assets/img/profiles/avatar-02.jpg">
+                                            </span>
+                                            <div class="media-body flex-grow-1">
+                                                <p class="noti-details"><span class="noti-title">Carlson Tech</span> has
+                                                    approved <span class="noti-title">your estimate</span></p>
+                                                <p class="noti-time"><span class="notification-time">4 mins ago</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="notification-message">
+                                    <a href="#">
+                                        <div class="media d-flex">
+                                            <span class="avatar avatar-sm flex-shrink-0">
+                                                <img class="avatar-img rounded-circle" alt="User Image"
+                                                    src="../assets/img/profiles/avatar-11.jpg">
+                                            </span>
+                                            <div class="media-body flex-grow-1">
+                                                <p class="noti-details"><span class="noti-title">International Software
+                                                        Inc</span> has sent you a invoice in the amount of <span
+                                                        class="noti-title">$218</span></p>
+                                                <p class="noti-time"><span class="notification-time">6 mins ago</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="notification-message">
+                                    <a href="#">
+                                        <div class="media d-flex">
+                                            <span class="avatar avatar-sm flex-shrink-0">
+                                                <img class="avatar-img rounded-circle" alt="User Image"
+                                                    src="../assets/img/profiles/avatar-17.jpg">
+                                            </span>
+                                            <div class="media-body flex-grow-1">
+                                                <p class="noti-details"><span class="noti-title">John Hendry</span> sent
+                                                    a cancellation request <span class="noti-title">Apple iPhone
+                                                        XR</span></p>
+                                                <p class="noti-time"><span class="notification-time">8 mins ago</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="notification-message">
+                                    <a href="#">
+                                        <div class="media d-flex">
+                                            <span class="avatar avatar-sm flex-shrink-0">
+                                                <img class="avatar-img rounded-circle" alt="User Image"
+                                                    src="../assets/img/profiles/avatar-13.jpg">
+                                            </span>
+                                            <div class="media-body flex-grow-1">
+                                                <p class="noti-details"><span class="noti-title">Mercury Software
+                                                        Inc</span> added a new product <span class="noti-title">Apple
+                                                        MacBook Pro</span></p>
+                                                <p class="noti-time"><span class="notification-time">12 mins ago</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="topnav-dropdown-footer">
+                            <a href="#">View all Notifications</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item zoom-screen me-2">
+                    <a href="#" class="nav-link header-nav-list win-maximize">
+                        <img src="../assets/img/icons/header-icon-04.svg" alt="">
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown has-arrow new-user-menus">
+                    <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+                        <span class="user-img">
+                            <img class="rounded-circle" src="../assets/img/profiles/avatar-01.jpg" width="31"
+                                alt="Soeng Souy">
+                            <div class="user-text">
+                                <h6>Borel Njeunkwe</h6>
+                                <p class="text-muted mb-0">Gestionnaire</p>
+                            </div>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="user-header">
+                            <div class="avatar avatar-sm">
+                                <img src="../assets/img/profiles/avatar-01.jpg" alt="User Image"
+                                    class="avatar-img rounded-circle">
+                            </div>
+                            <div class="user-text">
+                                <h6>Borel Njeunkwe</h6>
+                                <p class="text-muted mb-0">Gestionnaire</p>
+                            </div>
+                        </div>
+                        <a class="dropdown-item" href="profile.html">Mon Compte</a>
+                        <a class="dropdown-item" href="../index.html">Déconnexion</a>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+
+                        <li class="submenu">
+                            <a href="#"><i class="feather-grid"></i> <span> Dashboard</span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="../pages/dashboard.html">Gestionnaire de Parc</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu active">
+                            <a href="#"><i class="fas fa-user-nurse"></i> <span> Chauffeurs</span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="drivers.html" class="active"> Liste Chauffeurs</a></li>
+                                <li><a href="driver-details.html">Detail Chauffeur</a></li>
+                                <li><a href="add-driver.html">Enregistrer Chauffeur</a></li>
+                                <li><a href="edit-driver.html">Modifier Chauffeur</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="submenu">
+                            <a href="#"><i class="fas fa-bus"></i> <span> Véhicules</span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="drivers.html"> Liste Véhicules</a></li>
+                                <li><a href="driver-details.html">Detail Véhicule</a></li>
+                                <li><a href="add-driver.html">Enregistrer Véhicule</a></li>
+                                <li><a href="edit-driver.html">Modifier Véhicule</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-title">
+                            <span>Management</span>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="fees-collections.html">Fees Collection</a></li>
+                                <li><a href="expenses.html">Expenses</a></li>
+                                <li><a href="salary.html">Salary</a></li>
+                                <li><a href="add-fees-collection.html">Add Fees</a></li>
+                                <li><a href="add-expenses.html">Add Expenses</a></li>
+                                <li><a href="add-salary.html">Add Salary</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="settings.html"><i class="fas fa-cog"></i> <span>Settings</span></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-sub-header">
+                                <h3 class="page-title">Chauffeurs</h3>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                                    <li class="breadcrumb-item active">Liste Chauffeurs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-table comman-shadow">
+                            <div class="card-body pb-0">
+
+                                <div class="page-header">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h3 class="page-title">Chauffeurs</h3>
+                                        </div>
+                                        <div class="col-auto text-end float-end ms-auto download-grp">
+                                            <a href="drivers.html" class="btn btn-outline-gray me-2"><i
+                                                    class="feather-list"></i></a>
+                                            <a href="drivers-grid.html" class="btn btn-outline-gray me-2 active"><i
+                                                    class="feather-grid "></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="student-pro-list">
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-4 col-md-6 d-flex">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="student-box flex-fill">
+                                                        <div class="student-img">
+                                                            <a href="student-details.html">
+                                                                <img class="img-fluid" alt="Students Info"
+                                                                    src="../assets/img/profiles/avatar-03.jpg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="student-content pb-0">
+                                                            <h5><a href="student-details.html">Malynne</a></h5>
+                                                            <h6>Chauffeur</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 d-flex">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="student-box flex-fill">
+                                                        <div class="student-img">
+                                                            <a href="student-details.html">
+                                                                <img class="img-fluid" alt="Students Info"
+                                                                    src="../assets/img/profiles/avatar-04.jpg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="student-content pb-0">
+                                                            <h5><a href="student-details.html">Levell Scott</a></h5>
+                                                            <h6>Chauffeur</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 d-flex">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="student-box flex-fill">
+                                                        <div class="student-img">
+                                                            <a href="student-details.html">
+                                                                <img class="img-fluid" alt="Students Info"
+                                                                    src="../assets/img/profiles/avatar-05.jpg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="student-content pb-0">
+                                                            <h5><a href="student-details.html">Minnie</a></h5>
+                                                            <h6>Chauffeur</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 d-flex">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="student-box flex-fill">
+                                                        <div class="student-img">
+                                                            <a href="student-details.html">
+                                                                <img class="img-fluid" alt="Students Info"
+                                                                    src="../assets/img/profiles/avatar-06.jpg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="student-content pb-0">
+                                                            <h5><a href="student-details.html">Lois A</a></h5>
+                                                            <h6>Chauffeur</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 d-flex">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="student-box flex-fill">
+                                                        <div class="student-img">
+                                                            <a href="student-details.html">
+                                                                <img class="img-fluid" alt="Students Info"
+                                                                    src="../assets/img/profiles/avatar-07.jpg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="student-content pb-0">
+                                                            <h5><a href="student-details.html">Calvin</a></h5>
+                                                            <h6>Chauffeur</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 d-flex">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="student-box flex-fill">
+                                                        <div class="student-img">
+                                                            <a href="student-details.html">
+                                                                <img class="img-fluid" alt="Students Info"
+                                                                    src="../assets/img/profiles/avatar-08.jpg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="student-content pb-0">
+                                                            <h5><a href="student-details.html">Charles Dickens</a></h5>
+                                                            <h6>Chauffeur</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 d-flex">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="student-box flex-fill">
+                                                        <div class="student-img">
+                                                            <a href="student-details.html">
+                                                                <img class="img-fluid" alt="Students Info"
+                                                                    src="../assets/img/profiles/avatar-09.jpg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="student-content pb-0">
+                                                            <h5><a href="student-details.html">Joe Kelley</a></h5>
+                                                            <h6>Chauffeur</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 d-flex">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="student-box flex-fill">
+                                                        <div class="student-img">
+                                                            <a href="student-details.html">
+                                                                <img class="img-fluid" alt="Students Info"
+                                                                    src="../assets/img/profiles/avatar-10.jpg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="student-content pb-0">
+                                                            <h5><a href="student-details.html">Charles Dickens</a></h5>
+                                                            <h6>Chauffeur</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 d-flex">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="student-box flex-fill">
+                                                        <div class="student-img">
+                                                            <a href="student-details.html">
+                                                                <img class="img-fluid" alt="Students Info"
+                                                                    src="../assets/img/profiles/avatar-11.jpg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="student-content pb-0">
+                                                            <h5><a href="student-details.html">Jane Chambers</a></h5>
+                                                            <h6>Chauffeur</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 d-flex">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="student-box flex-fill">
+                                                        <div class="student-img">
+                                                            <a href="student-details.html">
+                                                                <img class="img-fluid" alt="Students Info"
+                                                                    src="../assets/img/profiles/avatar-12.jpg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="student-content pb-0">
+                                                            <h5><a href="student-details.html">Nathan Humphries</a></h5>
+                                                            <h6>Chauffeur</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 d-flex">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="student-box flex-fill">
+                                                        <div class="student-img">
+                                                            <a href="student-details.html">
+                                                                <img class="img-fluid" alt="Students Info"
+                                                                    src="../assets/img/profiles/avatar-13.jpg">
+                                                            </a>
+                                                        </div>
+                                                        <div class="student-content pb-0">
+                                                            <h5><a href="student-details.html">Vincent krysler</a></h5>
+                                                            <h6>Chauffeur</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p>Copyright © 2022 Dreamguys.</p>
+            </footer>
+
+        </div>
+
+    </div>
+
+
+    <script src="../assets/js/jquery-3.6.0.min.js"></script>
+
+    <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../assets/js/feather.min.js"></script>
+
+    <script src="../assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <script src="../assets/plugins/datatables/datatables.min.js"></script>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>
