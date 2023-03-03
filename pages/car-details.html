@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=0"
     />
-    <title>GESPAU Chauffeurs</title>
+    <title>GESPAU Vehicules</title>
 
     <link rel="shortcut icon" href="../assets/img/bella_auto_logo.jpg" />
 
@@ -26,11 +26,6 @@
 
     <link
       rel="stylesheet"
-      href="../assets/css/bootstrap-datetimepicker.min.css"
-    />
-
-    <link
-      rel="stylesheet"
       href="../assets/plugins/fontawesome/css/fontawesome.min.css"
     />
     <link
@@ -40,7 +35,7 @@
 
     <link
       rel="stylesheet"
-      href="../assets/plugins/select2/css/select2.min.css"
+      href="../assets/plugins/datatables/datatables.min.css"
     />
 
     <link rel="stylesheet" href="../assets/css/style.css" />
@@ -48,7 +43,7 @@
 
   <body>
     <div class="main-wrapper">
-     <div class="header">
+      <div class="header">
         <div class="header-left">
           <a href="index.html" class="logo">
             <img src="../assets/img/logo1.png" alt="Logo" />
@@ -58,8 +53,8 @@
             <img
               src="../assets/img/logo-small.png"
               alt="Logo"
-              width="90"
-              height="90"
+              width="30"
+              height="30"
             />
             <!-- <h3><b>G</b></h3> -->
           </a>
@@ -274,7 +269,6 @@
           </li>
         </ul>
       </div>
-
       <div class="sidebar" id="sidebar">
         <div class="sidebar-inner slimscroll">
           <div id="sidebar-menu" class="sidebar-menu">
@@ -291,41 +285,57 @@
                 </ul>
               </li>
 
-              <li class="submenu active">
+              <li class="submenu">
                 <a href="#"
                   ><i class="fas fa-user-nurse"></i> <span> Chauffeurs</span>
                   <span class="menu-arrow"></span
                 ></a>
                 <ul>
                   <li><a href="drivers.html"> Liste Chauffeurs</a></li>
-                  <li><a href="driver-details.html">Detail Chauffeur</a></li>
                   <li>
-                    <a href="add-driver.html"
-                      >Enregistrer Chauffeur</a
+                    <a href="driver-details.html"
+                      >Detail Chauffeur</a
                     >
                   </li>
-                  <li><a href="edit-driver.html" class="active">Modifier Chauffeur</a></li>
+                  <li><a href="add-driver.html">Enregistrer Chauffeur</a></li>
+                  <li><a href="edit-driver.html">Modifier Chauffeur</a></li>
                 </ul>
               </li>
 
-              <li class="submenu">
+              <li class="submenu active">
                 <a href="#"
                   ><i class="fas fa-bus"></i> <span> Véhicules</span>
                   <span class="menu-arrow"></span
                 ></a>
                 <ul>
-                 <li><a href="#"> Liste Véhicules</a></li>
-                  <li><a href="#">Detail Véhicule</a></li>
-                  <li><a href="#">Enregistrer Véhicule</a></li>
-                  <li><a href="#">Modifier Véhicule</a></li>
+                  <li><a href="cars.html"> Liste Véhicules</a></li>
+                  <li><a href="#" class="active">Detail Véhicule</a></li>
+                  <li><a href="add-car.html">Enregistrer Véhicule</a></li>
+                  <li><a href="edit-car.html">Modifier Véhicule</a></li>
                 </ul>
               </li>
 
-            
+              <li class="menu-title">
+                <span>Management</span>
+              </li>
+              <li class="submenu">
+                <a href="#"
+                  ><i class="fas fa-file-invoice-dollar"></i>
+                  <span> Accounts</span> <span class="menu-arrow"></span
+                ></a>
+                <ul>
+                  <li><a href="fees-collections.html">Fees Collection</a></li>
+                  <li><a href="expenses.html">Expenses</a></li>
+                  <li><a href="salary.html">Salary</a></li>
+                  <li><a href="add-fees-collection.html">Add Fees</a></li>
+                  <li><a href="add-expenses.html">Add Expenses</a></li>
+                  <li><a href="add-salary.html">Add Salary</a></li>
+                </ul>
+              </li>
 
               <li>
                 <a href="settings.html"
-                  ><i class="fas fa-cog"></i> <span>Parametres</span></a
+                  ><i class="fas fa-cog"></i> <span>Settings</span></a
                 >
               </li>
             </ul>
@@ -336,136 +346,191 @@
       <div class="page-wrapper">
         <div class="content container-fluid">
           <div class="page-header">
-            <div class="row align-items-center">
+            <div class="row">
               <div class="col-sm-12">
                 <div class="page-sub-header">
-                  <h3 class="page-title">Modification Chauffeur</h3>
+                  <h3 class="page-title">Detail Chauffeur</h3>
                   <ul class="breadcrumb">
                     <li class="breadcrumb-item">
-                      <a href="dashboard.html">Dashboard</a>
+                      <a href="./dashboard.html">Dashboard</a>
                     </li>
-                    <li class="breadcrumb-item active">Modifier Chauffeur</li>
+                    <li class="breadcrumb-item active">Detail Chauffeur</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="card comman-shadow">
-                <div class="card-body">
-                  <form>
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="about-info">
+                    <h4>
+                      Profile
+                      <span
+                        ><a href="javascript:;"
+                          ><i class="feather-more-vertical"></i></a
+                      ></span>
+                    </h4>
+                  </div>
+                  <div class="student-profile-head">
+                    <div class="profile-bg-img">
+                      <img
+                        src="../assets/img/Logo_BELLA_AUTO_noir.png"
+                        alt="Profile"
+                        height="700"
+                      />
+                    </div>
                     <div class="row">
-                      <div class="col-12">
-                        <h5 class="form-title student-info">
-                          Information du Chauffeur
-                          <span
-                            ><a href="javascript:;"
-                              ><i class="feather-more-vertical"></i></a
-                          ></span>
-                        </h5>
-                      </div>
-                      <div class="col-12 col-sm-4">
-                        <div class="form-group local-forms">
-                          <label>Nom <span class="login-danger">*</span></label>
-                          <input
-                            class="form-control"
-                            type="text"
-                            value="John"
-                          />
+                      <div class="col-lg-4 col-md-4">
+                        <div class="profile-user-box">
+                          <div class="profile-user-img">
+                            <img
+                              src="../assets/img/profile-user.jpg"
+                              alt="Profile"
+                            />
+                            <div
+                              class="form-group students-up-files profile-edit-icon mb-0"
+                            >
+                              <div class="uplod d-flex">
+                                <label class="file-upload profile-upbtn mb-0">
+                                  <i class="feather-edit-3"></i
+                                  ><input type="file" />
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="names-profiles">
+                            <h4>Bruce Willis</h4>
+                            <h5>Expert en conduite Defensive</h5>
+                          </div>
                         </div>
                       </div>
-                      <div class="col-12 col-sm-4">
-                        <div class="form-group local-forms">
-                          <label
-                            >Prenom <span class="login-danger">*</span></label
-                          >
-                          <input
-                            class="form-control"
-                            type="text"
-                            value="Doe"
-                          />
+                      <div class="col-lg-4 col-md-4 d-flex align-items-center">
+                        <div class="follow-group">
+                          <div class="students-follows">
+                            <h5>Missions Effectuees</h5>
+                            <h4>285</h4>
+                          </div>
+                          <div class="students-follows">
+                            <h5>Accidents</h5>
+                            <h4>0</h4>
+                          </div>
+                          <div class="students-follows">
+                            <h5>Points</h5>
+                            <h4>490</h4>
+                          </div>
                         </div>
                       </div>
-                      <div class="col-12 col-sm-4">
-                        <div class="form-group local-forms">
-                          <label
-                            >Genre <span class="login-danger">*</span></label
-                          >
-                          <select class="form-control select">
-                            <option>Choisir le Genre</option>
-                            <option selected>Homme</option>
-                            <option>Femme</option>
-                          </select>
-                        </div>
+                      <div class="col-lg-4 col-md-4 d-flex align-items-center">
+                        <div class="follow-btn-group"></div>
                       </div>
-                      <div class="col-12 col-sm-4">
-                        <div class="form-group local-forms calendar-icon">
-                          <label
-                            >Date de naissance
-                            <span class="login-danger">*</span></label
-                          >
-                          <input
-                            class="form-control datetimepicker"
-                            type="text"
-                            value="12-04-1989"
-                          />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="student-personals-grp">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="heading-detail">
+                          <h4>Details :</h4>
                         </div>
-                      </div>
-
-                      <div class="col-12 col-sm-4">
-                        <div class="form-group local-forms">
-                          <label
-                            >E-Mail <span class="login-danger">*</span></label
-                          >
-                          <input
-                            class="form-control"
-                            type="text"
-                            value="Johndoe66@gmail.com"
-                          />
+                        <div class="personal-activity">
+                          <div class="personal-icons">
+                            <i class="feather-user"></i>
+                          </div>
+                          <div class="views-personal">
+                            <h4>Nom et Prenom</h4>
+                            <h5>Bruce Willis</h5>
+                          </div>
                         </div>
-                      </div>
-
-                      <div class="col-12 col-sm-4">
-                        <div class="form-group local-forms">
-                          <label
-                            >Telephone <span class="login-danger">*</span>
-                          </label>
-                          <input
-                            class="form-control"
-                            type="text"
-                            value="698 778 523"
-                          />
+                        <div class="personal-activity">
+                          <div class="personal-icons">
+                            <img
+                              src="../assets/img/icons/buliding-icon.svg"
+                              alt=""
+                            />
+                          </div>
+                          <div class="views-personal">
+                            <h4>Agence</h4>
+                            <h5>Douala - Akwa</h5>
+                          </div>
                         </div>
-                      </div>
-
-                      <div class="col-12 col-sm-4">
-                        <div class="form-group local-forms">
-                          <label>Telephone 2 </label>
-                          <input
-                            class="form-control"
-                            type="text"
-                            value=""
-                          />
+                        <div class="personal-activity">
+                          <div class="personal-icons">
+                            <i class="feather-phone-call"></i>
+                          </div>
+                          <div class="views-personal">
+                            <h4>Telephone</h4>
+                            <h5>+237 695 877 693</h5>
+                          </div>
                         </div>
-                      </div>
-
-                      <div class="col-12 col-sm-4"></div>
-                      <div class="col-12">
-                        <div class="student-submit">
-                          <button type="submit" class="btn btn-primary">
-                            Enregistrer
-                          </button>
+                        <div class="personal-activity">
+                          <div class="personal-icons">
+                            <i class="feather-mail"></i>
+                          </div>
+                          <div class="views-personal">
+                            <h4>Email</h4>
+                            <h5>
+                              <a
+                                href="/cdn-cgi/l/email-protection"
+                                class="__cf_email__"
+                                data-cfemail="81e5e0e8f2f8c1e6ece0e8edafe2eeec"
+                                >BruceWillis@gmail.com</a
+                              >
+                            </h5>
+                          </div>
+                        </div>
+                        <div class="personal-activity">
+                          <div class="personal-icons">
+                            <i class="feather-user"></i>
+                          </div>
+                          <div class="views-personal">
+                            <h4>Sexe</h4>
+                            <h5>Homme</h5>
+                          </div>
+                        </div>
+                        <div class="personal-activity">
+                          <div class="personal-icons">
+                            <i class="feather-calendar"></i>
+                          </div>
+                          <div class="views-personal">
+                            <h4>Date de naissance</h4>
+                            <h5>22 Apr 1875</h5>
+                          </div>
+                        </div>
+                        <div class="personal-activity">
+                          <div class="personal-icons">
+                            <i class="feather-italic"></i>
+                          </div>
+                          <div class="views-personal">
+                            <h4>Langues</h4>
+                            <h5>Francais, Anglais</h5>
+                          </div>
+                        </div>
+                        <div class="personal-activity mb-0">
+                          <div class="personal-icons">
+                            <i class="feather-map-pin"></i>
+                          </div>
+                          <div class="views-personal">
+                            <h4>Addresse</h4>
+                            <h5>Douala, entre eneo bloc 4</h5>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <footer>
+          <p id="footer_copyright"></p>
+        </footer>
       </div>
     </div>
 
@@ -476,7 +541,10 @@
     ></a>
 
     <script src="../assets/js/copyrightFooter.js"></script>
-
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
     <script src="../assets/js/jquery-3.6.0.min.js"></script>
 
     <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -485,14 +553,7 @@
 
     <script src="../assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-    <script src="../assets/plugins/datatables/datatables.min.js"></script>
-
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/additionalScript.js"></script>
-
-    <script src="../assets/plugins/moment/moment.min.js"></script>
-    <script src="../assets/js/bootstrap-datetimepicker.min.js"></script>
-
-    <script src="../assets/plugins/select2/js/select2.min.js"></script>
   </body>
 </html>
